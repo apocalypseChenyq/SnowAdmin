@@ -111,6 +111,13 @@ export default {
     ["tree-tools"]: "tree-tools",
     ["file-tools"]: "file-tools",
     ["verify-tools"]: "verify tools",
-    ["test"]: "test"
+    ["test"]: "test",
+    ["加油站管理"]: "Gas Station Management",
+    ["数据概览"]: "Dashboard",
+    ["站点管理"]: "Station Management",
+    ["油价管理"]: "Fuel Price Management",
+    ["库存管理"]: "Inventory Management",
+    ["订单管理"]: "Order Management",
+    ["申请开票"]: "Apply Invoice"
   }
 };

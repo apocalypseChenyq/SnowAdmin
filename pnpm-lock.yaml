@@ -26,6 +26,9 @@ importers:
       '@fingerprintjs/fingerprintjs':
         specifier: ^4.6.2
         version: 4.6.2
+      '@sentry/vue':
+        specifier: 9.34.0
+        version: 9.34.0(pinia@2.3.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3)))(vue@3.5.15(typescript@5.8.3))
       '@visactor/vchart':
         specifier: ^1.11.0
         version: 1.13.10
@@ -1168,6 +1171,40 @@ packages:
     resolution: {integrity: sha512-Wq2zpapRYLfi4aKxf2Xff0tN+7slj2d4R87WEzqw7ZLsVvO5zwYCIuEGSZYiK41+GlwUo1HiR+GdkLEJnCKTCw==}
     cpu: [x64]
     os: [win32]
+
+  '@sentry-internal/browser-utils@9.34.0':
+    resolution: {integrity: sha512-pXVznvP4CROejYtk6y7UQvPTieWz2vXjukGlO45fsnQa9nNo30lkQh3Ws2HZw2YbTxYZQYx75FBDezwKl2q0hQ==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/feedback@9.34.0':
+    resolution: {integrity: sha512-HT/EBRl1DR8XqlJk2wFNPJFcnIzNcEDjmW7C/o7K0GeP5jcSH0dKpcH7ykz2bi46gMRPrkO5EK2eXGK81KYI3g==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay-canvas@9.34.0':
+    resolution: {integrity: sha512-GCtqMFk9WwrU3JNz1tlCFAhzmNfgZhLRaS0cLzoTuxPbG3CC2VUIWYEOw7+AdCJZGm8ElTMxu+BkChgGb8qthQ==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay@9.34.0':
+    resolution: {integrity: sha512-joYSqWltmpkcqI8Gg8jwFtPv0F01whmuQfNGoGaL7Z6B/xO1vvkqEudrg1tmswUHhqtYpZYaEaCvrmv0sPGCfA==}
+    engines: {node: '>=18'}
+
+  '@sentry/browser@9.34.0':
+    resolution: {integrity: sha512-6oJxU7JEA/RCgMTVlHXT54U9d0DWg61GgzyLTM+FUa8OUrAoK/t+CZGSMc/13nYN8xs7vcpiORdRx0ogch9zGw==}
+    engines: {node: '>=18'}
+
+  '@sentry/core@9.34.0':
+    resolution: {integrity: sha512-M/zikVaE3KLkhCFDyrHB35sF7pVkB2RPy07BcRsdFsSsdpjoG+Zq2Sxth2tMTbjd0x9Vtb/X6LVjyCj9GSEvVg==}
+    engines: {node: '>=18'}
+
+  '@sentry/vue@9.34.0':
+    resolution: {integrity: sha512-kfpGYEe2MlTsScGQ+/mvOIHhRxXZotwaBa+KOT1HEbzu5dyTOlw96hGODkmf9pLkm0nOOSA02B2fga3Um+8ZWg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      pinia: 2.x || 3.x
+      vue: 2.x || 3.x
+    peerDependenciesMeta:
+      pinia:
+        optional: true
 
   '@transloadit/prettier-bytes@0.0.7':
     resolution: {integrity: sha512-VeJbUb0wEKbcwaSlj5n+LscBl9IPgLPkHVGBkh00cztv6X4L/TJXK58LzFuBKX7/GAfiGhIwH67YTLTlzvIzBA==}
@@ -5915,6 +5952,42 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.41.1':
     optional: true
 
+  '@sentry-internal/browser-utils@9.34.0':
+    dependencies:
+      '@sentry/core': 9.34.0
+
+  '@sentry-internal/feedback@9.34.0':
+    dependencies:
+      '@sentry/core': 9.34.0
+
+  '@sentry-internal/replay-canvas@9.34.0':
+    dependencies:
+      '@sentry-internal/replay': 9.34.0
+      '@sentry/core': 9.34.0
+
+  '@sentry-internal/replay@9.34.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 9.34.0
+      '@sentry/core': 9.34.0
+
+  '@sentry/browser@9.34.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 9.34.0
+      '@sentry-internal/feedback': 9.34.0
+      '@sentry-internal/replay': 9.34.0
+      '@sentry-internal/replay-canvas': 9.34.0
+      '@sentry/core': 9.34.0
+
+  '@sentry/core@9.34.0': {}
+
+  '@sentry/vue@9.34.0(pinia@2.3.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3)))(vue@3.5.15(typescript@5.8.3))':
+    dependencies:
+      '@sentry/browser': 9.34.0
+      '@sentry/core': 9.34.0
+      vue: 3.5.15(typescript@5.8.3)
+    optionalDependencies:
+      pinia: 2.3.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3))
+
   '@transloadit/prettier-bytes@0.0.7': {}
 
   '@trysound/sax@0.2.0': {}
@@ -9405,6 +9478,7 @@ snapshots:
       '@codemirror/lang-vue': 0.1.3
       '@codemirror/theme-one-dark': 6.1.2
       '@fingerprintjs/fingerprintjs': 4.6.2
+      '@sentry/vue': 9.34.0(pinia@2.3.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3)))(vue@3.5.15(typescript@5.8.3))
       '@visactor/vchart': 1.13.10
       '@visactor/vchart-arco-theme': 1.12.2(@visactor/vchart@1.13.10)
       '@vueuse/core': 12.8.2(typescript@5.8.3)
@@ -9423,6 +9497,7 @@ snapshots:
       qrcode: 1.5.4
       recorder-core: 1.3.25011100
       sortablejs: 1.15.6
+      uuid: 11.1.0
       vue: 3.5.15(typescript@5.8.3)
       vue-codemirror6: 1.3.15(@popperjs/core@2.11.8)(core-js@3.42.0)(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3))
       vue-color-kit: 1.0.6(vue@3.5.15(typescript@5.8.3))

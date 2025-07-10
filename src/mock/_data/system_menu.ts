@@ -67,6 +67,153 @@ export const systemMenu = [
     children: null // 存储子节点字段，默认为null
   },
   {
+    id: "015",
+    parentId: "0",
+    path: "/gas-station",
+    name: "gas-station",
+    redirect: "/gas-station/dashboard",
+    meta: {
+      title: "加油站管理",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      svgIcon: "earth",
+      sort: 1.5,
+      type: 1
+    },
+    children: null
+  },
+  {
+    id: "01501",
+    parentId: "015",
+    path: "/gas-station/dashboard",
+    name: "gas-station-dashboard",
+    component: "gas-station/dashboard/dashboard",
+    meta: {
+      title: "数据概览",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      icon: "icon-dashboard",
+      sort: 1,
+      type: 2
+    },
+    children: null
+  },
+  {
+    id: "01502",
+    parentId: "015",
+    path: "/gas-station/station-management",
+    name: "station-management",
+    component: "gas-station/station-management/station-management",
+    meta: {
+      title: "站点管理",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      icon: "icon-home",
+      sort: 2,
+      type: 2
+    },
+    children: null
+  },
+  {
+    id: "01503",
+    parentId: "015",
+    path: "/gas-station/fuel-price",
+    name: "fuel-price",
+    component: "gas-station/fuel-price/fuel-price",
+    meta: {
+      title: "油价管理",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      icon: "icon-tag",
+      sort: 3,
+      type: 2
+    },
+    children: null
+  },
+  {
+    id: "01504",
+    parentId: "015",
+    path: "/gas-station/inventory",
+    name: "inventory",
+    component: "gas-station/inventory/inventory",
+    meta: {
+      title: "库存管理",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      icon: "icon-storage",
+      sort: 4,
+      type: 2
+    },
+    children: null
+  },
+  {
+    id: "01505",
+    parentId: "015",
+    path: "/gas-station/order",
+    name: "order",
+    component: "gas-station/order/order",
+    meta: {
+      title: "订单管理",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      icon: "icon-file-text",
+      sort: 5,
+      type: 2
+    },
+    children: null
+  },
+  {
+    id: "01506",
+    parentId: "015",
+    path: "/gas-station/invoice/apply",
+    name: "apply-invoice",
+    component: "gas-station/invoice/apply-invoice/apply-invoice",
+    meta: {
+      title: "申请开票",
+      hide: false,
+      disable: false,
+      keepAlive: true,
+      affix: false,
+      link: "",
+      iframe: false,
+      roles: ["admin", "common"],
+      svgIcon: "financial-statement",
+      sort: 6,
+      type: 2
+    },
+    children: null
+  },
+  {
     id: "02",
     parentId: "0",
     path: "/file",
